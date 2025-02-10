@@ -1,0 +1,181 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('/assets/background-dark.jpg') no-repeat center center fixed; /* Ganti dengan gambar latar belakang */
+    background-size: cover; /* Pastikan gambar menutupi seluruh latar belakang */
+    color: #fff; /* Ubah warna teks menjadi putih untuk kontras */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Splash Screen */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8); /* Tambahkan transparansi */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#splash-screen h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#splash-screen p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Tombol di Splash Screen */
+#splash-screen button {
+    background: white;
+    color: #ff5774;
+    border: none;
+    padding: 5px 12px; /* Mengurangi tinggi tombol */
+    border-radius: 30px; /* Tetap bulat tetapi lebih kecil */
+    font-size: 12px; /* Mengurangi ukuran teks */
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: auto; /* Menghindari tombol menjadi terlalu panjang */
+    min-width: 100px; /* Atur panjang minimal */
+    max-width: 150px; /* Batasi panjang maksimum */
+    text-align: center;
+}
+
+#splash-screen button:hover {
+    background: #ffe4e9;
+    transform: scale(1.05);
+}
+
+/* Animasi menghilangkan Splash */
+.hidden {
+    opacity: 0;
+    transform: scale(1.1);
+    pointer-events: none;
+}
+
+/* Container utama */
+.container {
+    background-size: cover; /* Pastikan gambar menutupi seluruh kontainer */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ubah bayangan untuk kontras */
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Judul */
+h1, h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Input nama */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Tombol */
+button {
+    background: #ff758c;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff5774; /* Ubah warna hover tombol */
+}
+
+/* Tampilan pertanyaan */
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Tombol jawaban */
+.answer-btn {
+    background: rgba(255, 255, 255, 0.8); /* Ubah latar belakang tombol jawaban */
+    color: #333;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Efek hover & jika dipilih */
+.answer-btn:hover {
+    background: #ff758c; /* Ubah warna hover tombol jawaban */
+    color: white;
+}
+
+.selected {
+    background: #ff758c !important;
+    color: white !important;
+}
+
+/* Tombol Next */
+#next-btn {
+    margin-top: 20px;
+    display: none;
+}
+
+/* Hasil */
+#result-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5774;
+    margin-top: 20px;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 20px;
+    }
+    button {
+        font-size: 16px;
+    }
+    .answer-btn {
+        font-size: 14px;
+    }
+}

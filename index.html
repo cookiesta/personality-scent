@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masukkan Nama</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+      <h1>Temukan Scent Yang Paling Cocok Untukmu!</h1>
+      <p>
+        Setiap aroma memiliki cerita. Jawab pertanyaan-pertanyaan berikut ini
+        dan kamu akan menemukan aroma terbaik sesuai dengan kepribadian kamu
+      </p>
+      <button onclick="hideSplash()">Mulai</button>
+    </div>
+
+    <!-- Kontainer utama -->
+    <div class="container" id="main-content" style="display: none">
+      <h1>Masukkan Dulu Dong Namanya</h1>
+      <input type="text" id="username" placeholder="Nama kamu..." />
+      <button onclick="startQuiz()">Lanjut</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
