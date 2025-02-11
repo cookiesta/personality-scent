@@ -13,9 +13,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('/assets/background-dark.jpg') no-repeat center center fixed; /* Ganti dengan gambar latar belakang */
-    background-size: cover; /* Pastikan gambar menutupi seluruh latar belakang */
-    color: #fff; /* Ubah warna teks menjadi putih untuk kontras */
+    background: url('/assets/background-dark.jpg') no-repeat center center fixed; 
+    background-size: cover; 
+    color: #fff; 
     text-align: center;
     padding: 20px;
 }
@@ -27,7 +27,7 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.8); /* Tambahkan transparansi */
+    background: rgba(0, 0, 0, 0.8); 
     color: white;
     display: flex;
     flex-direction: column;
@@ -53,16 +53,16 @@ body {
     background: white;
     color: #ff5774;
     border: none;
-    padding: 5px 12px; /* Mengurangi tinggi tombol */
-    border-radius: 30px; /* Tetap bulat tetapi lebih kecil */
-    font-size: 12px; /* Mengurangi ukuran teks */
+    padding: 5px 12px;
+    border-radius: 30px; 
+    font-size: 12px; 
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    width: auto; /* Menghindari tombol menjadi terlalu panjang */
-    min-width: 100px; /* Atur panjang minimal */
-    max-width: 150px; /* Batasi panjang maksimum */
+    width: auto; 
+    min-width: 100px; 
+    max-width: 150px; 
     text-align: center;
 }
 
@@ -80,13 +80,27 @@ body {
 
 /* Container utama */
 .container {
-    background-size: cover; /* Pastikan gambar menutupi seluruh kontainer */
-    padding: 30px;
+    background: rgba(0, 0, 0, 0.5); /* Warna hitam transparan */
+    backdrop-filter: blur(8px); /* Efek blur untuk estetika */
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ubah bayangan untuk kontras */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
     width: 90%;
     max-width: 500px;
+    padding: 20px;
 }
+
+
+/* Pastikan teks dan elemen lain tetap terlihat jelas */
+.container h1, 
+.container h2, 
+.container p, 
+.container input, 
+.container button, 
+.container .answer-btn {
+    position: relative;
+    z-index: 1; /* Pastikan konten tidak ikut transparan */
+}
+
 
 /* Judul */
 h1, h2 {
@@ -119,7 +133,7 @@ button {
 }
 
 button:hover {
-    background: #ff5774; /* Ubah warna hover tombol */
+    background: #ff5774; 
 }
 
 /* Tampilan pertanyaan */
@@ -132,7 +146,7 @@ button:hover {
 
 /* Tombol jawaban */
 .answer-btn {
-    background: rgba(255, 255, 255, 0.8); /* Ubah latar belakang tombol jawaban */
+    background: rgba(255, 255, 255, 0.8); 
     color: #333;
     padding: 12px;
     border-radius: 8px;
@@ -144,7 +158,7 @@ button:hover {
 
 /* Efek hover & jika dipilih */
 .answer-btn:hover {
-    background: #ff758c; /* Ubah warna hover tombol jawaban */
+    background: #ff758c; /* mengubah warna hover tombol jawaban */
     color: white;
 }
 
